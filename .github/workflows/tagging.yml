@@ -22,4 +22,4 @@ jobs:
         prev_tag: 'v0.0.0'
         update_odoo_module_version: false
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}

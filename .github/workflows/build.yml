@@ -7,11 +7,6 @@ on:
     tags:
       - "*"
   workflow_dispatch:
-  workflow_run:
-    workflows:
-      - tagging
-    types:
-      - completed
 
 jobs:
   build:
@@ -42,6 +37,7 @@ jobs:
           images: ghcr.io/${{ github.repository }}
           tags: |
             type=ref,event=branch
+            type=ref,event=tag
             type=semver,pattern={{version}}
             type=semver,pattern={{major}}.{{minor}}
             type=sha

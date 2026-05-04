@@ -1,6 +1,6 @@
 import os
 
-from flask import Flask, request
+from flask import Flask, request, jsonify
 from ingredient_parser import parse_ingredient
 
 app = Flask(__name__)
@@ -35,7 +35,7 @@ def breakdown_ingredient():
         "preparation": parsed_ingredient.preparation.text if parsed_ingredient.preparation else None
     }
 
-    return response
+    return jsonify(response)
 
 if __name__ == "__main__":
     app.run(

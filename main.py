@@ -34,7 +34,7 @@ def breakdown_ingredient():
         "size": parsed_ingredient.size.text if parsed_ingredient.size else None,
         "preparation": parsed_ingredient.preparation.text if parsed_ingredient.preparation else None,
         "comment": parsed_ingredient.comment.text if parsed_ingredient.comment else None,
-        "purpose": parsed_ingredient.purpose.text if parsed_ingredient.purpose else Non
+        "purpose": parsed_ingredient.purpose.text if parsed_ingredient.purpose else None
     }
 
     return jsonify(response)

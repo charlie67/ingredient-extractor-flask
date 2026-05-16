@@ -23,7 +23,7 @@ def breakdown_ingredient():
     for q in parsed_ingredient.amount:
         quantities.append({
             "text": q.text,
-            "quantity": float(q.quantity),
+            "quantity": float(q.quantity) if q.quantity else None,
             "unit": str(q.unit)
         })
 

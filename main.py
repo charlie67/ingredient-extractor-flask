@@ -22,9 +22,9 @@ def breakdown_ingredient():
     quantities = []
     for q in parsed_ingredient.amount:
         quantities.append({
-            "text": q.text,
+            "text": q.text if q.text else None,
             "quantity": float(q.quantity) if q.quantity else None,
-            "unit": str(q.unit)
+            "unit": str(q.unit) if q.unit else None
         })
 
     response = {
